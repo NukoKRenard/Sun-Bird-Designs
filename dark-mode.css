@@ -1,0 +1,85 @@
+* {
+    --background-color: rgb(20,20,20);
+    --background-color-secondary: rgb(0,0,0);
+
+    --primary-color: rgb(200,125,0);
+    --secondary-color: rgb(100,0,200);
+}
+
+@font-face {
+    font-family: "Wind Song";
+    src: url("assets/fonts/WindSong-Regular.ttf") format("truetype");
+}
+
+body {
+    background: var(--background-color);
+
+    padding:0%;
+    margin: 0%;
+}
+
+@property --header-gradient {
+    syntax: "<number>";
+    initial-value: 0;
+    inherits:true;
+}
+
+#header {
+    position:relative;
+    display: inline-flex;
+    width:98%;
+
+    padding: 1%;
+    margin:none;
+
+    background: var(--background-color-secondary);
+
+    margin-bottom: 5px;
+}
+#header::before {
+    position:absolute;
+    content: "";
+    height:5px;
+    left:0px;
+    bottom: -5px;
+    width: 100%;
+    background: linear-gradient(.25turn, var(--primary-color), var(--secondary-color))
+}
+#header::after {
+    z-index: -1;
+    position:absolute;
+    content: "";
+    height:100px;
+    left:0px;
+    bottom: -5px;
+    width: 100%;
+    background: linear-gradient(.25turn,var(--primary-color), var(--secondary-color));
+
+    filter: blur(100px);
+}
+
+#header > h1 {
+    font-family: "Wind Song";
+    color: var(--primary-color);
+    font-size: 600%;
+}
+
+#header > img {
+    width: 10%;
+    height: 10%;
+
+    transition: .3s;
+}
+
+#header > img:hover {
+    transform:rotate3D(-.33,-.33,0, 45deg);
+}
+
+.covertriangle {
+    width:50px;
+    height:50px;
+
+    background-color: white;
+
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
