@@ -1,0 +1,22 @@
+.revealgrid {
+    position: absolute;
+    z-index:-1;
+    top:0px;
+    left:0px;
+    
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(var(--rows),1fr);
+    grid-template-rows: repeat(var(--columns),1fr);
+}
+
+.gridmember {
+    padding: 0px;
+    margin: 3px;
+
+    background:var(--dark-color);
+
+    transition: .3s;
+}
