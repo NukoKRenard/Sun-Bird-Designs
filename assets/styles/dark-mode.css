@@ -5,6 +5,8 @@
     --primary-color: rgb(200,125,0);
     --secondary-color: rgb(100,0,200);
     --dark-color: rgb(30,30,30);
+
+    --text-color: rgb(200,200,200);
 }
 
 @font-face {
@@ -12,14 +14,14 @@
     src: url("../fonts/falconpunchgrad.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Olivers Barney";
+    src: url("../fonts/Olivers Barney.otf") format("opentype");
+}
+
 body {
     background: var(--background-color);
 
     padding:0%;
     margin: 0%;
-
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    align-items:center;
 }

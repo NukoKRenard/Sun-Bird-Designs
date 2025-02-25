@@ -1,5 +1,5 @@
 const animationtime = 2000;
-const tilesize = 50;
+const tilesize = 70;
 
 function populateGrid(element) {
 	const tilesh = Math.floor(element.clientWidth / tilesize);
@@ -34,7 +34,7 @@ function face(element,x,y) {
     let perc = (1/((len/300-1)**2+1))
     let rot = perc*50;
 
-    element.style.transform = "perspective(100px) rotate3d("+ynorm/len+","+-xnorm/len+","+0+","+rot+"deg) translate3d(0,0,"+-perc*50+"px)";
+    element.style.transform = "perspective(50px) rotate3d("+ynorm/len+","+-xnorm/len+","+0+","+rot+"deg) translate3d(0,0,"+-perc*50+"px)";
 }
 
 function gridface(element, x, y)

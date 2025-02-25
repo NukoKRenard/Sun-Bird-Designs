@@ -1,17 +1,12 @@
 .logo {
-    width:40vh;
+    width:50vh;
 }
 
-svg {
-    width: 10vh;
-    height: 10vh;
-    position:relative;
-}
-.button {
-    position: absolute;
-    top:0px;
-    left:0px;
-    translate: 50% 50%;
+body {
+    display:flex;
+    justify-content:space-around;
+    flex-direction:column;
+    align-items:center;
 }
 
 .buttons {
@@ -22,9 +17,25 @@ svg {
     justify-content:space-around;
     align-content:center;
 }
-buttons > svg {
-    width: 10vh;
-    height: 10vh;
+button {
+    width: 40vh;
+    height: 15vh;
+
+    border-radius: 4em;
+
+    color: var(--text-color);
+    background: var(--dark-color);
+    font-family: "Olivers Barney";
+    font-size: 5vh;
+
+    border: solid 5px var(--secondary-color);
+    transition-duration: 500ms;
+
+    cursor: url("../assets/images/SunBirdDesignsLogo.png");
+}
+
+button:hover {
+    border-color: var(--primary-color);
 }
 
 .logotext {
